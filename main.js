@@ -7,13 +7,21 @@ let ATeamScore = 0;
 let BTeamScore = 0;
 
 function ANewTeamScore(){
-    const ATeamNewScore = prompt("Yeni Takım Skorunu Girin..");
-    ATeam.innerHTML = ATeamNewScore;
+    const ATeamNewScore = +prompt("Yeni Takım Skorunu Girin..");
+    if(ATeamNewScore < 100){
+        ATeam.innerHTML = ATeamNewScore;
+    }else{
+        alert("Lütfen Geçerli bir sayı girin.")
+    }
 }
 
 function BNewTeamScore(){
-    const BTeamNewScore = prompt("Yeni Takım Skorunu Girin..")
-    BTeam.innerHTML = BTeamNewScore;
+    const BTeamNewScore = +prompt("Yeni Takım Skorunu Girin..")
+    if(BNewTeamScore < 100){
+        BTeam.innerHTML = BTeamNewScore;
+    }else{
+        alert("Lütfen Geçerli bir sayı girin.")
+    }
 }
 
 function ChangeATeamName(){
